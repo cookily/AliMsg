@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="AliMsg:war">
-    <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="msg.war">
-      <element id="artifact" artifact-name="AliMsg:war exploded" />
-    </root>
-  </artifact>
-</component>

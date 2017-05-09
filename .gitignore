@@ -4,3 +4,4 @@ target/
 .idea/
 *.iml
 *.properties
+core.properties

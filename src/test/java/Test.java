@@ -1,13 +1,24 @@
+import cn.cookily.msg.util.ConfUtils;
 import cn.cookily.msg.util.SendMsg;
 import com.taobao.api.ApiException;
 
-/**
- * Created by cookily on 2017/5/8.
- */
+import java.util.HashMap;
+import java.util.Map;
+
 public class Test {
 
     @org.junit.Test
     public void testSendMsg() throws ApiException {
-        new SendMsg().sendMsg();
+        Map<String,String> map=new HashMap<String, String>();
+        map.put("title","小菊花网");
+        map.put("code","4524");
+
+        String conten=new SendMsg().sendMsg("you_phone_num",map);
+
+    }
+
+    @org.junit.Test
+    public void readConf(){
+        System.out.println(ConfUtils.SMS_FREE_SIGN_NAME);
     }
 }

@@ -21,11 +21,10 @@ public class SendMsg {
         AlibabaAliqinFcSmsNumSendRequest req=new AlibabaAliqinFcSmsNumSendRequest();
 
         //req.setExtend("12345回传");//待测 可选
+
         req.setSmsType(ConfUtils.SMS_TYPE);//短信类型 必须
 
-        req.setSmsFreeSignName("kikutv小菊");// 必须
-
-//        System.out.println(ConfUtils.SMS_FREE_SIGN_NAME);
+        req.setSmsFreeSignName(ConfUtils.SMS_FREE_SIGN_NAME);// 必须
 
         JSONObject jsonObject=new JSONObject(maps);
 

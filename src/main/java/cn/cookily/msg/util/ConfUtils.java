@@ -1,6 +1,5 @@
 package cn.cookily.msg.util;
 
-import java.net.URL;
 import java.util.Map;
 
 /**
@@ -16,15 +15,8 @@ public class ConfUtils {
     public static String SMS_TEMPLATE_CODE=null;
 
     static {
-        URL url = ConfUtils.class.getClassLoader().getResource("core.properties");
-        String uri = url.toString();
-//        System.out.println(url);
-        String path = uri.substring(uri.indexOf("/") + 1);
 
-        //TODO: 2017/4/14  路径问题，虽然这样成功了，但明显不是最优解
-//        System.out.println(path);
-
-        Map<String, String> maps = PropertiesUtil.getProperties(path);
+        Map<String, String> maps = PropertiesUtil.getProperties("/core.properties");
 
         SERVER_URL=maps.get("SERVER_URL");
         APP_KEY=maps.get("APP_KEY");

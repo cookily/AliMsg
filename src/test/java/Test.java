@@ -13,7 +13,7 @@ public class Test {
         map.put("title","小菊花网");
         map.put("code","4525");
 
-       String conten=new SendMsg().sendMsg("15298801995",map);
+        String conten=new SendMsg().sendMsg("15298801995",map);
 
     }
 

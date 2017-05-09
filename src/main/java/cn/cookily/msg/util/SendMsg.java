@@ -1,11 +1,11 @@
 package cn.cookily.msg.util;
 
+import com.alibaba.fastjson.JSON;
 import com.taobao.api.ApiException;
 import com.taobao.api.DefaultTaobaoClient;
 import com.taobao.api.TaobaoClient;
 import com.taobao.api.request.AlibabaAliqinFcSmsNumSendRequest;
 import com.taobao.api.response.AlibabaAliqinFcSmsNumSendResponse;
-import org.json.JSONObject;
 
 import java.util.Map;
 
@@ -26,9 +26,7 @@ public class SendMsg {
 
         req.setSmsFreeSignName(ConfUtils.SMS_FREE_SIGN_NAME);// 必须
 
-        JSONObject jsonObject=new JSONObject(maps);
-
-        req.setSmsParamString(jsonObject.toString());//json格式的短信模板的变量，多个变量括号隔开 可选
+        req.setSmsParamString(JSON.toJSONString(maps));  //json格式的短信模板的变量，多个变量括号隔开 可选
 
         req.setRecNum(phone);//接收的手机号码 必须
 

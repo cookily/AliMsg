@@ -11,9 +11,9 @@ public class Test {
     public void testSendMsg() throws ApiException {
         Map<String,String> map=new HashMap<String, String>();
         map.put("title","小菊花网");
-        map.put("code","4525");
+        map.put("code","4524");
 
-        String conten=new SendMsg().sendMsg("",map);
+        String conten=new SendMsg().sendMsg("you_phone_num",map);
 
     }
 
